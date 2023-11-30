@@ -1,0 +1,189 @@
+#logo {
+    transform: rotateX(0deg);
+    transition: 3.5s;
+}
+
+#logo:hover {
+    transform: rotateX(360deg);
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #000000, #060304, #0a060a, #0c090f, #0c0d14, #0d1118, #0d141b, #0c171e, #0c1a23, #0b1d28, #09212e, #062433);
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(227, 46, 46) !important;
+    text-decoration: underline;
+}
+
+.lupa i {
+    color: white;
+}
+
+.jumbotron {
+    background-color: #ceecef;
+    display: flex;
+    justify-content: center;
+    font-family: "Prompt", sans-serif;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    z-index: -1;
+}
+
+.jumbotron h1 a {
+    color: black;
+    text-shadow: 0 0 5px rgb(232, 139, 17), 0 0 5px rgb(232, 139, 17);
+    text-decoration: none;
+}
+
+.jumbotron a:hover {
+    color: #abdecb;
+    text-shadow: 0 0 5px #9c1515, 0 0 5px #9c1515;
+    text-decoration: underline;
+    filter: brightness(1.5);
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+h2 {
+    background-image: linear-gradient(to top, #091e47, #0b224e, #0c2755, #0e2b5c, #0f3063, #0a3466, #053768, #013b6b, #003e69, #004066, #024262, #0c445f);
+    color: rgb(232, 139, 17);
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.card-body {
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.banner {
+    background-image: linear-gradient(to top, #091e47, #0b224e, #0c2755, #0e2b5c, #0f3063, #0a3466, #053768, #013b6b, #003e69, #004066, #024262, #0c445f);
+    color: rgb(232, 139, 17);
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.img-fluid {
+    padding: 20px;
+}
+
+section {
+    background-image: linear-gradient(to bottom, #091e47, #0b224e, #0c2755, #0e2b5c, #0f3063, #0a3466, #053768, #013b6b, #003e69, #004066, #024262, #0c445f);
+}
+
+.original-price {
+    text-decoration: line-through !important;
+}
+
+#miSection {
+    height: 250px;
+}
+
+.carousel {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 400px !important;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.carousel-indicators {
+    bottom: -15px;
+}
+
+footer {
+    background-color: #e7edea;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 0%;
+}
+
+footer img {
+    margin-right: 30px;
+    text-align: center;
+    margin-top: auto;
+    transition: transform 0.3s;
+}
+
+.social-link:hover img {
+    transform: scale(1.1);
+}
+
+.footer p {
+    color: black;
+    padding: 30px;
+    margin: 0%;
+}
+
+@media only screen and (min-width: 0) and (max-width: 576px) {
+    .navbar-collapse {
+    background-image: linear-gradient(to right, #000000, #060304, #0a060a, #0c090f, #0c0d14, #0d1118, #0d141b, #0c171e, #0c1a23, #0b1d28, #09212e, #062433);
+    display: flex;
+    justify-content: right;
+    }
+    .jumbotron {
+    background-color: #e4ebec;
+    display: flex;
+    justify-content: center;
+    font-family: "Prompt", sans-serif;
+    }
+    section {
+    background-color: rgb(36, 63, 97);
+    }
+    .carousel {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 220px !important;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0 !important;
+    }
+    .carousel-item img {
+    max-height: 220px;
+    }
+    .carousel-indicators {
+    bottom: -20px;
+    }
+    .footer {
+    margin-top: 0 !important;
+    padding: 1px 0;
+    }
+    footer img {
+    margin-right: 30px;
+    text-align: center;
+    margin-top: 20px;
+    }
+}
