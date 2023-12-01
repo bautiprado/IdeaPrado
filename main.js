@@ -16,7 +16,7 @@ const camisetas = [
     {
     Titulo: "Neymar",
     Precio: "$50.000",
-    Estado: "9/10"
+    Estado: "9/10",
     },
     {
     Titulo: "Independiente 2016",
@@ -194,4 +194,73 @@ do {
     }
 } while (confirmacion);
 
+/*
+let cartCamisetas = []
+let addButton = document.querySelectorAll(".camisetaAgregar")
+let camisetasContainer = document.getElementById("camisetas-container")
 
+function renderCamisetas(camisetasArray) {
+    camisetasArray.forEach(camiseta => {
+        const card = document.createElement("div")
+        card.innerHTML= `<h3>${camiseta.Titulo}</h3>
+        <p>${camiseta.Precio}</p>
+        <button class="camisetaAgregar" id="${camiseta.Titulo}">Agregar</button>`
+        
+        camisetasContainer.appendChild(card)
+    });
+    addToCartButton ()
+}
+renderCamisetas(camisetas)
+
+function addToCartButton () {
+    addButton = document.querySelectorAll(".camisetaAgregar")
+    addButton.forEach(button => {
+        button.onclick = (e) => {
+            const camisetaId = e.currentTarget.id
+            const selectedCamiseta = camisetas.find(camiseta => camiseta.id == camisetaId)
+
+            cartCamisetas.push (selectedCamiseta)
+            console.log(cartCamisetas)
+        }
+    })
+}*/
+
+
+let cartCamisetas
+let cartCamisetasLS = localStorage.getItem("cartCamisetas")
+if (cartCamisetasLS) {
+    cartCamisetas = JSON.parse(cartCamisetasLS)
+} else {
+    cartCamisetas = []
+}
+
+let camisetasContainer = document.getElementById("camisetas-container");
+
+function renderCamisetas(camisetasArray) {
+    camisetasArray.forEach(camiseta => {
+        const card = document.createElement("div");
+        card.innerHTML = `<h3>${camiseta.Titulo}</h3>
+                        <p>${camiseta.Precio}</p>
+                        <button class="camisetaAgregar" id="${camiseta.Titulo}">Agregar</button>`;
+        camisetasContainer.appendChild(card);
+    });
+
+    addToCartButton(camisetasArray);
+}
+
+function addToCartButton(camisetasArray) {
+    let addButton = document.querySelectorAll(".camisetaAgregar");
+    addButton.forEach(button => {
+        button.onclick = (e) => {
+            const camisetaId = e.currentTarget.id;
+            const selectedCamiseta = camisetasArray.find(camiseta => camiseta.Titulo === camisetaId);
+
+            cartCamisetas.push(selectedCamiseta);
+            console.log(cartCamisetas);
+
+            localStorage.setItem("cartCamisetas", JSON.stringify(cartCamisetas))
+        };
+    });
+}
+
+renderCamisetas(camisetas);
