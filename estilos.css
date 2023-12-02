@@ -66,11 +66,16 @@ h2 {
 }
 
 h3 {
-    color: white
+    color: white;
 }
 
 div.card-body {
     color: white;
+}
+
+.camisetaAñadirAlCarrito {
+    background-color: rgb(175, 169, 169);
+    color: black;
 }
 
 .banner {
@@ -85,6 +90,7 @@ div.card-body {
 p {
     color: white;
     text-align: center;
+    text-align: left;
 }
 
 .img-fluid {

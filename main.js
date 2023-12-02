@@ -194,37 +194,6 @@ do {
     }
 } while (confirmacion);
 
-/*
-let cartCamisetas = []
-let addButton = document.querySelectorAll(".camisetaAgregar")
-let camisetasContainer = document.getElementById("camisetas-container")
-
-function renderCamisetas(camisetasArray) {
-    camisetasArray.forEach(camiseta => {
-        const card = document.createElement("div")
-        card.innerHTML= `<h3>${camiseta.Titulo}</h3>
-        <p>${camiseta.Precio}</p>
-        <button class="camisetaAgregar" id="${camiseta.Titulo}">Agregar</button>`
-        
-        camisetasContainer.appendChild(card)
-    });
-    addToCartButton ()
-}
-renderCamisetas(camisetas)
-
-function addToCartButton () {
-    addButton = document.querySelectorAll(".camisetaAgregar")
-    addButton.forEach(button => {
-        button.onclick = (e) => {
-            const camisetaId = e.currentTarget.id
-            const selectedCamiseta = camisetas.find(camiseta => camiseta.id == camisetaId)
-
-            cartCamisetas.push (selectedCamiseta)
-            console.log(cartCamisetas)
-        }
-    })
-}*/
-
 
 let cartCamisetas
 let cartCamisetasLS = localStorage.getItem("cartCamisetas")
@@ -240,7 +209,8 @@ function renderCamisetas(camisetasArray) {
     camisetasArray.forEach(camiseta => {
         const card = document.createElement("div");
         card.innerHTML = `<div class="card-body">
-                        <p><h3>${camiseta.Titulo}</h3>${camiseta.Precio}</p>
+                        <h3>${camiseta.Titulo}</h3>
+                        <p>${camiseta.Precio}</p>
                         <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">Añadir al carrito</button>`;
         camisetasContainer.appendChild(card);
     });
@@ -255,11 +225,15 @@ function addToCartButton(camisetasArray) {
             const camisetaId = e.currentTarget.id;
             const selectedCamiseta = camisetasArray.find(camiseta => camiseta.Titulo === camisetaId);
 
+            if (selectedCamiseta.Precio.toLowerCase() === "coleccionable") {
+                alert("Este producto es de colección y no está a la venta");
+            } else {
             cartCamisetas.push(selectedCamiseta);
             console.log(cartCamisetas);
 
             localStorage.setItem("cartCamisetas", JSON.stringify(cartCamisetas))
-        };
+            }
+        }
     });
 }
 
