@@ -239,9 +239,9 @@ let camisetasContainer = document.getElementById("camisetas-container");
 function renderCamisetas(camisetasArray) {
     camisetasArray.forEach(camiseta => {
         const card = document.createElement("div");
-        card.innerHTML = `<h3>${camiseta.Titulo}</h3>
-                        <p>${camiseta.Precio}</p>
-                        <button class="camisetaAgregar" id="${camiseta.Titulo}">Agregar</button>`;
+        card.innerHTML = `<div class="card-body">
+                        <p><h3>${camiseta.Titulo}</h3>${camiseta.Precio}</p>
+                        <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">Añadir al carrito</button>`;
         camisetasContainer.appendChild(card);
     });
 
@@ -249,7 +249,7 @@ function renderCamisetas(camisetasArray) {
 }
 
 function addToCartButton(camisetasArray) {
-    let addButton = document.querySelectorAll(".camisetaAgregar");
+    let addButton = document.querySelectorAll(".camisetaAñadirAlCarrito");
     addButton.forEach(button => {
         button.onclick = (e) => {
             const camisetaId = e.currentTarget.id;
