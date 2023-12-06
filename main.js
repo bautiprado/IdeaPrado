@@ -1,198 +1,136 @@
-function saludo() {
-    alert("Bienvenido a Seven Only Fútbol, te ofrecemos camisetas únicas 🙌🏻");
-    alert("¡Empecemos!");
-}
-
-saludo();
-
-function calcularOferta(precioInicial, descuentoPorcentaje = 20) {
-    let descuento = (precioInicial * descuentoPorcentaje) / 100;
-    let oferta = precioInicial - descuento;
-    alert("El precio con un " + descuentoPorcentaje + "% de descuento es: " + oferta);
-    return oferta;
-}
-
 const camisetas = [
     {
-    Titulo: "Neymar",
+    Titulo: "Neymar campeón Libertadores 2011",
     Precio: "$50.000",
     Estado: "9/10",
+    Image: "camisetas/Neymar campeón Libertadores 2011.jpg"
     },
     {
-    Titulo: "Independiente 2016",
+    Titulo: "Independiente visitante 2016-17",
     Precio: "$30.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Independiente visitante 2016-17.jpg"
     },
     {
-    Titulo: "Napoli",
+    Titulo: "Napoli visitante 2015-16",
     Precio: "$30.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Napoli visitante 2015-16.jpg"
     },
     {
-    Titulo: "Sampdoria",
+    Titulo: "Sampdoria local 2014-15",
     Precio: "$30.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Sampdoria local 2014-15.jpg"
     },
     {
-    Titulo: "Independiente 2023",
+    Titulo: "Independiente visitante 2023",
     Precio: "$25.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Buzo NYC",
+    Titulo: "Buzo New York City 2020",
     Precio: "$60.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Messi",
+    Titulo: "Messi local campeón Mundial Qatar 2022",
     Precio: "$35.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Argentina",
+    Titulo: "Argentina Entrenamiento Tiro 23",
     Precio: "$20.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Independiente 2020",
+    Titulo: "Independiente entrenamiento 2020",
     Precio: "$10.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Independiente 2014",
+    Titulo: "Independiente tercera equipación 2014/15",
     Precio: "$15.000",
     Estado: "8/10"
     },
     {
-    Titulo: "Sevilla",
+    Titulo: "Sevilla local 2016/17",
     Precio: "$20.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Campera Independiente",
+    Titulo: "Campera Independiente 2015",
     Precio: "$20.000",
     Estado: "7/10"
     },
     {
-    Titulo: "Bale",
+    Titulo: "Bale local campeón UCL 2017/18",
     Precio: "$45.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Sergio Ramos",
+    Titulo: "Sergio Ramos tercera equipación campeón UCL 2013/14",
     Precio: "$45.000",
     Estado: "9/10"
     },
     {
-    Titulo: "Real Madrid mujer",
+    Titulo: "Real Madrid mujer segunda equipacion 2012/13",
     Precio: "$30.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Independiente 2018",
+    Titulo: "Independiente final Recopa Sudamericana 2018",
     Precio: "$30.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Billetera Real Madrid",
+    Titulo: "Billetera Real Madrid 2017",
     Precio: "$11.500",
     Estado: "8/10"
     },
     {
-    Titulo: "Kun",
+    Titulo: "Kun Agüero Manchester City campeón Premier League 2011/12",
     Precio: "Coleccionable",
     Estado: "5/10"
     },
     {
-    Titulo: "Independiente 2017",
+    Titulo: "Independiente campeón Sudamericana 2017",
     Precio: "Coleccionable",
     Estado: "8/10"
     },
     {
-    Titulo: "Real Madrid 2014",
+    Titulo: "Real Madrid local campeón Supercopa de Europa y Mundial de Clubes 2014/15",
     Precio: "Coleccionable",
     Estado: "10/10"
     },
     {
-    Titulo: "Buzo LAG",
+    Titulo: "Buzo Los Angeles Galaxy 2020",
     Precio: "Coleccionable",
     Estado: "9/10"
     },
     {
-    Titulo: "Real Madrid 2012",
+    Titulo: "Real Madrid entrenamiento 2012/13",
     Precio: "$15.000",
     Estado: "10/10"
     },
     {
-    Titulo: "Independiente 2017 blanca",
+    Titulo: "Independiente edición especial 2017",
     Precio: "$15.000",
     Estado: "7/10"
     },
     {
-    Titulo: "Arsenal",
+    Titulo: "Arsenal Pre-Match 2014/15",
     Precio: "$12.500",
     Estado: "7/10"
     },
     {
-    Titulo: "Short Independiente",
+    Titulo: "Short Independiente 2015",
     Precio: "$10.000",
     Estado: "7/10"
     }
 ];
 
 console.table(camisetas);
-
-let confirmacion = true;
-
-do {
-    let precioDescuento;
-
-    while (true) {
-    let nombreCamiseta = prompt("Ingrese el nombre de la camiseta que desea");
-
-    let camisetaEncontrada = camisetas.find(camiseta => camiseta.Titulo.toLowerCase() === nombreCamiseta.toLowerCase());
-
-    if (camisetaEncontrada) {
-        break;
-    } else {
-        alert("Lo sentimos, la camiseta ingresada no está disponible en nuestra tienda");
-    }
-    }
-
-    while (true) {
-    precioDescuento = parseFloat(prompt("Ingrese su precio inicial para calcular el descuento"));
-
-    if (!isNaN(precioDescuento) && precioDescuento > 0) {
-        precioDescuento > 30000 ? console.log("El precio es mayor a 30.000") : console.log("El precio es menor a 30.000");
-
-        let oferta = calcularOferta(precioDescuento);
-
-        let respuesta;
-        do {
-        respuesta = prompt("¿Desea consultar por otra camiseta?");
-        if (respuesta === null) {
-            console.log("Operación cancelada");
-            confirmacion = false;
-            break;
-        } else if (respuesta.toLowerCase() !== 'si' && respuesta.toLowerCase() !== 'no') {
-            alert("Por favor, responda solo con 'si' o 'no'");
-        } else {
-            if (respuesta.toLowerCase() === 'no') {
-            confirmacion = false;
-            }
-            break;
-        }
-        } while (true);
-
-        if (!confirmacion) {
-        break;
-        }
-        break;
-    } else {
-        alert("Por favor, ingrese un número válido");
-    }
-    }
-} while (confirmacion);
 
 
 let cartCamisetas
@@ -208,10 +146,15 @@ let camisetasContainer = document.getElementById("camisetas-container");
 function renderCamisetas(camisetasArray) {
     camisetasArray.forEach(camiseta => {
         const card = document.createElement("div");
-        card.innerHTML = `<div class="card-body">
-                        <h3>${camiseta.Titulo}</h3>
-                        <p>${camiseta.Precio}</p>
-                        <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">Añadir al carrito</button>`;
+        card.classList.add("col-lg-3", "col-md-6", "col-sm-12");
+        card.innerHTML = `<div class="card mx-auto" style="width: 18rem; margin-bottom: 30px; height: 94%;">
+                        <img src="camisetas/${camiseta.Titulo}.jpg" alt="${camiseta.Titulo}" class="card-img-top">
+                        <div class="d-flex flex-column align-items-center">
+                        <h3 class="card-title text-center">${camiseta.Titulo}</h3>
+                        <p class="card-text text-dark">${camiseta.Precio}</p>
+                        <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">AÑADIR AL CARRITO</button>
+                        </div>
+                        </div>`;
         camisetasContainer.appendChild(card);
     });
 
