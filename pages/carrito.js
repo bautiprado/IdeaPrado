@@ -10,7 +10,7 @@ cartItems.forEach((camiseta, index) => {
     cart.innerHTML = `<div class="cart-item card mx-auto" style="width: 18rem; margin-bottom: 30px; height: 94%;">
                         <img src="../camisetas/${camiseta.Titulo}.jpg" alt="${camiseta.Titulo}" class="cart-img">
                         <div class="cart-details d-flex flex-column align-items-center">
-                        <h3 class="text-dark text-center">${camiseta.Titulo}</h3>
+                        <h3 class="text-dark">${camiseta.Titulo}</h3>
                         <p class="card-text text-dark">${camiseta.Precio}</p>
                         <button class="eliminar-btn btn btn-primary" data-index="${index}">ELIMINAR</button>
                         </div>

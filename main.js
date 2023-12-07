@@ -150,7 +150,7 @@ function renderCamisetas(camisetasArray) {
         card.innerHTML = `<div class="card mx-auto" style="width: 18rem; margin-bottom: 30px; height: 94%;">
                         <img src="camisetas/${camiseta.Titulo}.jpg" alt="${camiseta.Titulo}" class="card-img-top">
                         <div class="d-flex flex-column align-items-center">
-                        <h3 class="card-title text-center">${camiseta.Titulo}</h3>
+                        <h3 class="card-title">${camiseta.Titulo}</h3>
                         <p class="card-text text-dark">${camiseta.Precio}</p>
                         <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">AÑADIR AL CARRITO</button>
                         </div>
