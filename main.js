@@ -152,7 +152,7 @@ function renderCamisetas(camisetasArray) {
                         <div class="d-flex flex-column align-items-center">
                         <h3 class="card-title">${camiseta.Titulo}</h3>
                         <p class="card-text text-dark">${camiseta.Precio}</p>
-                        <button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">AÑADIR AL CARRITO</button>
+                        ${camiseta.Precio.toLowerCase() !== "coleccionable" ? `<button class="camisetaAñadirAlCarrito btn btn-primary" id="${camiseta.Titulo}">AÑADIR AL CARRITO</button>` : ''}
                         </div>
                         </div>`;
         camisetasContainer.appendChild(card);
@@ -161,6 +161,7 @@ function renderCamisetas(camisetasArray) {
     addToCartButton(camisetasArray);
 }
 
+
 function addToCartButton(camisetasArray) {
     let addButton = document.querySelectorAll(".camisetaAñadirAlCarrito");
     addButton.forEach(button => {
@@ -168,16 +169,41 @@ function addToCartButton(camisetasArray) {
             const camisetaId = e.currentTarget.id;
             const selectedCamiseta = camisetasArray.find(camiseta => camiseta.Titulo === camisetaId);
 
-            if (selectedCamiseta.Precio.toLowerCase() === "coleccionable") {
-                alert("Este producto es de colección y no está a la venta");
+            const existingCartItem = cartCamisetas.find(item => item.Titulo === camisetaId);
+            if (existingCartItem) {
+                existingCartItem.Cantidad = (existingCartItem.Cantidad || 1) + 1;
             } else {
-            cartCamisetas.push(selectedCamiseta);
-            console.log(cartCamisetas);
-
-            localStorage.setItem("cartCamisetas", JSON.stringify(cartCamisetas))
+                selectedCamiseta.Cantidad = 1;
+                cartCamisetas.push(selectedCamiseta);
             }
+
+            localStorage.setItem("cartCamisetas", JSON.stringify(cartCamisetas));
         }
     });
 }
 
 renderCamisetas(camisetas);
+
+
+let addButton = document.querySelectorAll(".camisetaAñadirAlCarrito");
+
+addButton.forEach(button => {
+    button.addEventListener("click", function() {
+        Toastify({
+            text: "Producto agregado al carrito",
+            duration: 3000,
+            destination: "pages/carrito.html",
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "linear-gradient(to bottom, #ffcc64, #c49a4c, #8b6b36, #553f20, #241908);",
+            },
+            onClick: function() {
+            }
+        }).showToast();
+    });
+});
+
