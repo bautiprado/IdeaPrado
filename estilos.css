@@ -109,6 +109,41 @@ section {
     background: transparent !important;
 }
 
+/* Estilos para el contador */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los botones de incremento/decremento */
+.minus-btn,
+.plus-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(225, 218, 218);
+}
+
+/* Estilos para la cantidad */
+.quantity {
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.total-container {
+    /* Agrega estilos según tus preferencias */
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+    /* Otros estilos que desees aplicar */
+}
+
+
 @media only screen and (min-width: 0) and (max-width: 576px) {
     .navbar-collapse {
     background-image: linear-gradient(to right, #000000, #060304, #0a060a, #0c090f, #0c0d14, #0d1118, #0d141b, #0c171e, #0c1a23, #0b1d28, #09212e, #062433);
