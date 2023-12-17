@@ -79,7 +79,7 @@ div.card-body {
 }
 
 .banner {
-    background-image: linear-gradient(to top, #091e47, #0b224e, #0c2755, #0e2b5c, #0f3063, #0a3466, #053768, #013b6b, #003e69, #004066, #024262, #0c445f);
+    background-image: linear-gradient(to top, #091e47, #0b224e, #0c2755, #0e2b5c, #0f3063, #0a3466, #053768, #013b6b, #003e69, #004066, #024262, #0c445f); 
     color: rgb(232, 139, 17);
     text-transform: uppercase;
     padding: 20px;
@@ -105,6 +105,11 @@ section {
     height: 250px;
 }
 
+.custom-toastify {
+    /* background-color: linear-gradient(to bottom, #ffcc64, #c49a4c, #8b6b36, #553f20, #241908); */
+    background-color: red !important;
+}
+
 .swal2-title {
     background: transparent !important;
 }
@@ -127,30 +132,39 @@ section {
     background-color: rgb(225, 218, 218);
 }
 
-/* Estilos para la cantidad */
+/* Estilos para la cantidad*/
 .quantity {
     font-size: 18px;
     margin: 0 5px;
 }
 
 .total-container {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #ffffff, #d7d7d7, #b1b1b1, #8c8c8c, #696969);
     border: 1px solid rgb(27, 41, 5);
     padding: 10px;
     margin-top: -30px;
     text-align: left;
     text-decoration: underline;
+    color: #242323; 
+    font-size: 16px; 
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    text-transform: uppercase;
 }
 
 .total-articulos {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #ffffff, #d7d7d7, #b1b1b1, #8c8c8c, #696969);
     border: 1px solid black;
     padding: 10px;
     margin-top: 1px;
     text-align: left;
     text-decoration: underline;
+    color: #242323; 
+    font-size: 16px;
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+    text-transform: uppercase;
 }
-
 
 
 

@@ -1,3 +1,10 @@
+Swal.fire({
+    title: "Bienvenido a Seven Only Fútbol, te ofrecemos camisetas únicas 🙌🏻",
+    text: "¡Empecemos!",
+    icon: "info"
+});
+
+
 const camisetas = [
     {
     Titulo: "Neymar campeón Libertadores 2011",
@@ -26,107 +33,128 @@ const camisetas = [
     {
     Titulo: "Independiente visitante 2023",
     Precio: "$25.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Independiente visitante 2023.jpg"
     },
     {
     Titulo: "Buzo New York City 2020",
     Precio: "$60.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Buzo New York City 2020.jpg"
     },
     {
     Titulo: "Messi local campeón Mundial Qatar 2022",
     Precio: "$35.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Messi local campeón Mundial Qatar 2022.jpg"
     },
     {
     Titulo: "Argentina Entrenamiento Tiro 23",
     Precio: "$20.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Argentina Entrenamiento Tiro 23.jpg"
     },
     {
     Titulo: "Independiente entrenamiento 2020",
     Precio: "$10.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Independiente entrenamiento 2020.jpg"
     },
     {
-    Titulo: "Independiente tercera equipación 2014/15",
+    Titulo: "Independiente tercera equipación 2014-15",
     Precio: "$15.000",
-    Estado: "8/10"
+    Estado: "8/10",
+    Image: "camisetas/Independiente tercera equipación 2014-15.jpg"
     },
     {
-    Titulo: "Sevilla local 2016/17",
+    Titulo: "Sevilla local 2016-17",
     Precio: "$20.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Sevilla local 2016-17.jpg"
     },
     {
     Titulo: "Campera Independiente 2015",
     Precio: "$20.000",
-    Estado: "7/10"
+    Estado: "7/10",
+    Image: "camisetas/Campera Independiente 2015.jpg"
     },
     {
-    Titulo: "Bale local campeón UCL 2017/18",
+    Titulo: "Bale local campeón UCL 2017-18",
     Precio: "$45.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Bale local campeón UCL 2017-18.jpg"
     },
     {
-    Titulo: "Sergio Ramos tercera equipación campeón UCL 2013/14",
+    Titulo: "Sergio Ramos tercera equipación campeón UCL 2013-14",
     Precio: "$45.000",
-    Estado: "9/10"
+    Estado: "9/10",
+    Image: "camisetas/Sergio Ramos tercera equipación campeón UCL 2013-14.jpg"
     },
     {
-    Titulo: "Real Madrid mujer segunda equipacion 2012/13",
+    Titulo: "Real Madrid mujer segunda equipacion 2012-13",
     Precio: "$30.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Real Madrid mujer segunda equipacion 2012-13.jpg"
     },
     {
     Titulo: "Independiente final Recopa Sudamericana 2018",
     Precio: "$30.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Independiente final Recopa Sudamericana 2018.jpg"
     },
     {
     Titulo: "Billetera Real Madrid 2017",
     Precio: "$11.500",
-    Estado: "8/10"
+    Estado: "8/10",
+    Image: "camisetas/Billetera Real Madrid 2017.jpg"
     },
     {
-    Titulo: "Kun Agüero Manchester City campeón Premier League 2011/12",
+    Titulo: "Kun Agüero Manchester City campeón Premier League 2011-12",
     Precio: "Coleccionable",
-    Estado: "5/10"
+    Estado: "5/10",
+    Image: "camisetas/Kun Agüero Manchester City campeón Premier League 2011-12.jpg"
     },
     {
     Titulo: "Independiente campeón Sudamericana 2017",
     Precio: "Coleccionable",
-    Estado: "8/10"
+    Estado: "8/10",
+    Image: "camisetas/Independiente campeón Sudamericana 2017.jpg"
     },
     {
-    Titulo: "Real Madrid local campeón Supercopa de Europa y Mundial de Clubes 2014/15",
+    Titulo: "Real Madrid local campeón Supercopa de Europa y Mundial de Clubes 2014-15",
     Precio: "Coleccionable",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Real Madrid local campeón Supercopa de Europa y Mundial de Clubes 2014-15.jpg"
     },
     {
     Titulo: "Buzo Los Angeles Galaxy 2020",
     Precio: "Coleccionable",
-    Estado: "9/10"
+    Estado: "9/10",
+    Image: "camisetas/Buzo Los Angeles Galaxy 2020.jpg"
     },
     {
-    Titulo: "Real Madrid entrenamiento 2012/13",
+    Titulo: "Real Madrid entrenamiento 2012-13",
     Precio: "$15.000",
-    Estado: "10/10"
+    Estado: "10/10",
+    Image: "camisetas/Real Madrid entrenamiento 2012-13.jpg"
     },
     {
     Titulo: "Independiente edición especial 2017",
     Precio: "$15.000",
-    Estado: "7/10"
+    Estado: "7/10",
+    Image: "camisetas/Independiente edición especial 2017.jpg"
     },
     {
-    Titulo: "Arsenal Pre-Match 2014/15",
+    Titulo: "Arsenal Pre-Match 2014-15",
     Precio: "$12.500",
-    Estado: "7/10"
+    Estado: "7/10",
+    Image: "camisetas/Arsenal Pre-Match 2014-15.jpg"
     },
     {
     Titulo: "Short Independiente 2015",
     Precio: "$10.000",
-    Estado: "7/10"
+    Estado: "7/10",
+    Image: "camisetas/Short Independiente 2015.jpg"
     }
 ];
 
